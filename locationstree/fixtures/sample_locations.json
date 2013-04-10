@@ -1,0 +1,54 @@
+[
+{
+  "pk": 1, 
+  "model": "locations.location", 
+  "fields": {
+    "rght": 8, 
+    "code": "CL", 
+    "name": "Chile", 
+    "parent": null, 
+    "level": 0, 
+    "lft": 1, 
+    "tree_id": 1
+  }
+},
+{
+  "pk": 2, 
+  "model": "locations.location", 
+  "fields": {
+    "rght": 3, 
+    "code": "CLC", 
+    "name": "Chile Central", 
+    "parent": 1, 
+    "level": 1, 
+    "lft": 2, 
+    "tree_id": 1
+  }
+},
+{
+  "pk": 3, 
+  "model": "locations.location", 
+  "fields": {
+    "rght": 5, 
+    "code": "CLN", 
+    "name": "Chile Extremo Norte", 
+    "parent": 1, 
+    "level": 1, 
+    "lft": 4, 
+    "tree_id": 1
+  }
+},
+{
+  "pk": 4, 
+  "model": "locations.location", 
+  "fields": {
+    "rght": 7, 
+    "code": "CLS", 
+    "name": "Chile Extremo Sur", 
+    "parent": 1, 
+    "level": 1, 
+    "lft": 6, 
+    "tree_id": 1
+  }
+}
+]
