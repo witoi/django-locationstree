@@ -5,10 +5,10 @@ from .conf import settings
 
 
 def locations(request):
-    locations = cache.get('locations.locations')
+    locations = cache.get('locationstree.locations')
     if locations is None:
         locations = Location.objects.all()
-        cache.set('locations.locations', locations, settings.LOCATIONS_CACHE_TTL)
+        cache.set('locationstree.locations', locations, settings.LOCATIONSTREE_CACHE_TTL)
     return {
-        settings.LOCATIONS_CONTEXT_VARIABLE_NAME: locations
+        settings.LOCATIONSTREE_CONTEXT_VARIABLE_NAME: locations
     }
