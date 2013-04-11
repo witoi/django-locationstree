@@ -11,7 +11,7 @@ from mptt.forms import TreeNodeChoiceField
 class JustLeafsLocationField(TreeNodeChoiceField):
     def __init__(self, *args, **kwargs):
         kwargs['widget'] = SelectWithDisabled()
-        self.default_error_messages['not_leaf'] = _('This value is disabled.')
+        self.default_error_messages['not_leaf'] = _('Select a valid choice. %(value)s is not one of the available choices.')
         super(JustLeafsLocationField, self).__init__(*args, **kwargs)
 
     def _get_choices(self):
@@ -24,7 +24,7 @@ class JustLeafsLocationField(TreeNodeChoiceField):
     def validate(self, value):
         super(JustLeafsLocationField, self).validate(value)
         if not value.is_leaf_node():
-            raise ValidationError(self.error_messages['not_leaf'])
+            raise ValidationError(self.error_messages['not_leaf'] % {'value': value})
 
 
 class GroupedLocationModelChoiceIterator(ModelChoiceIterator):
