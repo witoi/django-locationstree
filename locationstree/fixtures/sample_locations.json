@@ -1,7 +1,7 @@
 [
 {
   "pk": 1, 
-  "model": "locations.location", 
+  "model": "locationstree.location", 
   "fields": {
     "rght": 8, 
     "code": "CL", 
@@ -14,7 +14,7 @@
 },
 {
   "pk": 2, 
-  "model": "locations.location", 
+  "model": "locationstree.location", 
   "fields": {
     "rght": 3, 
     "code": "CLC", 
@@ -27,7 +27,7 @@
 },
 {
   "pk": 3, 
-  "model": "locations.location", 
+  "model": "locationstree.location", 
   "fields": {
     "rght": 5, 
     "code": "CLN", 
@@ -40,7 +40,7 @@
 },
 {
   "pk": 4, 
-  "model": "locations.location", 
+  "model": "locationstree.location", 
   "fields": {
     "rght": 7, 
     "code": "CLS", 
