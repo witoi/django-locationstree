@@ -23,7 +23,7 @@ class JustLeafsLocationField(TreeNodeChoiceField):
 
     def validate(self, value):
         super(JustLeafsLocationField, self).validate(value)
-        if not value.is_leaf_node():
+        if self.required and not value.is_leaf_node():
             raise ValidationError(self.error_messages['not_leaf'] % {'value': value})
 
 
