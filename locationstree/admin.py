@@ -5,4 +5,11 @@ from mptt.admin import MPTTModelAdmin
 from .models import Location
 
 
-admin.site.register(Location, MPTTModelAdmin)
+class LocationAdmin(MPTTModelAdmin):
+
+    list_filter = ('level', )
+    list_display = ('name', 'sort_order')
+    list_editable = ('sort_order', )
+
+
+admin.site.register(Location, LocationAdmin)
